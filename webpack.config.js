@@ -1,6 +1,6 @@
 var path = require('path');
     webpack = require('webpack'),
-    localhost = 'http://localhost:3334',
+    localhost = 'http://localhost:3344',
     hotMiddlewareEntry = 'webpack-hot-middleware/client?path=' + localhost + '/__webpack_hmr';
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
         path: path.join(__dirname, 'dist'),
         filename: '[name].js',
         publicPath: localhost + '/',
-        port: 3334
+        port: 3344
     },
     module: {
         loaders: [{

@@ -26,7 +26,7 @@ module.exports = {
         }, {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract(
-                'style-loader', // is our "before"
+                'style-loader',
                 ['raw-loader', 'sass-loader']
             )
         }]
