@@ -1,10 +1,11 @@
 var path = require('path');
     webpack = require('webpack'),
     localhost = 'http://localhost:3344',
-    hotMiddlewareEntry = 'webpack-hot-middleware/client?path=' + localhost + '/__webpack_hmr';
+    hotMiddlewareEntry = 'webpack-hot-middleware/client?path=' + localhost + '/__webpack_hmr',
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    devtool: 'cheap-module-eval-source-map',
+    // devtool: 'cheap-module-eval-source-map',
     entry: {
         index: [
             './examples/basic',
@@ -28,9 +29,15 @@ module.exports = {
                 path.join(__dirname, 'src')
             ]
         }, {
-            test: /\.scss$/,
-            loader: "style-loader!raw-loader!sass-loader"
-        }]
+            test: /(\.css$)|(\.scss$)/,
+            loader: ExtractTextPlugin.extract(
+                'style-loader',
+                ['raw-loader', 'sass-loader']
+            )
+        }, 
+{ test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+{ test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
+]
     },
     plugins: [
         new webpack.ProvidePlugin({
@@ -38,5 +45,6 @@ module.exports = {
             ReactDOM: 'react-dom'
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new ExtractTextPlugin('dev.css')
     ]
 };

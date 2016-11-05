@@ -1,6 +1,6 @@
 var path = require('path');
     webpack = require('webpack'),
-    ExtractTextPlugin = require('extract-text-webpack-plugin');;
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -24,11 +24,15 @@ module.exports = {
                 path.join(__dirname, 'src')
             ]
         }, {
-            test: /\.scss$/,
+            test: /(\.css$)|(\.scss$)/,
             loader: ExtractTextPlugin.extract(
                 'style-loader',
                 ['raw-loader', 'sass-loader']
             )
+        },
+        {
+            test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
+            loader: 'url'
         }]
     },
     externals: {

@@ -16,7 +16,7 @@ WYSIWYG (What You See is What You Get) editor in react, es6.
 1. Add support for WYSIWYG tables.
 
 ## Bugs
-1. Something probably doesn't work in IE.
+1. font awsome need to be build for prod, and take just the speicifc fonts
 
 ## Screenshot
 
