@@ -1,11 +1,11 @@
-import MyComponentName from '../src/my_component_name';
+import Editor from '../src/editor';
 
 class MyApp extends React.Component {
     render() {
         return (
             <div>
-                <h1>Basic component</h1>
-                <MyComponentName msg="world"/>
+                <h1>Basic WYSIWYG text editor</h1>
+                <Editor/>
             </div>
         )
     }

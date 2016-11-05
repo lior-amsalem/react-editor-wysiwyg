@@ -1,25 +1,26 @@
-# React Package Template
-This is basic initial react component template, if you want to build a new react component that you or others can consume (`import`/`require`) via npm registery for example - you can build the component (inside `src`) and publish it to npm.
+# React WYSIWYG text editor
+WYSIWYG (What You See is What You Get) editor in react, es6.
 
 
 ## How To Use
-1. Install with `npm install my-component-name --save`.
-2. Import to your "js" file: `import Input from 'my-component-name';`.
-3. In your code, use like that: `<MyComponentName onChange={this.test}/>`.
+1. Install with `npm install react-editor-wysiwyg --save`.
+2. Import to your "js" file: `import Editor from 'react-editor-wysiwyg';`.
+3. In your code, use like that: `<Editor/>`.
 4. See `example/basic.js` as reference.
 
 ## Features
-1. 
+1. Very Small foot print.
+2. Easy to use.
 
 ## Todo
-1. 
+1. Add support for WYSIWYG tables.
 
 ## Bugs
-1. 
+1. Something probably doesn't work in IE.
 
 ## Screenshot
 
-![alt tag](examples/my-component-name.jpg)
+![alt tag](examples/wysiwyg.jpg)
 
 ## How to Contribute
 1. Fork the project (top right button, in github UI).

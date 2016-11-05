@@ -5,7 +5,7 @@ var path = require('path');
 module.exports = {
     entry: {
         index: [
-            './src/my_component_name'
+            './src/editor'
         ]
     },
     target: 'node',
