@@ -20,7 +20,7 @@ WYSIWYG (What You See is What You Get) editor in react, es6.
 
 ## Screenshot
 
-![alt tag](examples/wysiwyg.jpg)
+![alt tag](screenshots/wysiwyg.jpg)
 
 ## How to Contribute
 1. Fork the project (top right button, in github UI).
