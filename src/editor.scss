@@ -1,5 +1,68 @@
-.react-editor-wysiwyg {
+.react-editor-wysiwyg-wrapper {
     border: 1px solid #b3c2ce;
     box-shadow: inset 0px 0px 3px #b3c2ce;
     padding: 5px;
+
+    .controllers {
+        a {
+            border: 1px solid #b9b9b9;
+            background: #FFF;
+            border-radius: 1px;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px;
+            color: #000;
+            margin-bottom: 10px;
+            margin-right: 3px;
+            box-shadow: inset 0 0 1px #b1b1b1;
+            min-width: 20px;
+            min-height: 18px;
+
+            &:hover {
+                background: #e4e4e4;
+                border-color: #868585;
+            }
+
+            &.highlight {
+                i {
+                    background-color: #ffff07;
+                }
+            }
+
+            &.H1 {
+                font-weight: 700;
+            }
+
+            &.horizontal-rule {
+                position: relative;
+                vertical-align: bottom;
+
+                &:after {
+                    content: "";
+                    background-color: #000;
+                    height: 2px;
+                    display: inline-block;
+                    position: absolute;
+                    left: 5px;
+                    right: 5px;
+                    margin: 3px;
+                }
+            }
+        }
+
+        .margin-right {
+            margin-right: 5px;
+        }
+    }
+
+    .react-editor-wysiwyg {
+        min-height: 200px;
+        border-top: 1px solid #dfdfdf;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        &:focus {
+            outline: 0;
+        }
+    }
 }
